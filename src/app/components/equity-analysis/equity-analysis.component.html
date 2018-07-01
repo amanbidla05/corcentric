@@ -1,0 +1,307 @@
+<h1>Equity Analysis</h1>
+<hr>
+{{data | json }}
+<!-- section1 -->
+<form #myform="ngForm" (ngSubmit)="onRetrive(myform.value)" >
+    <div class="section1">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label for="statusDate">Status Date :</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" type="date" id="statusDate" name="statusDate" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label for="subscriptionDate">Subscription Date :</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" type="date" id="subscriptionDate" name="subscriptionDate" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label for="calDate">Calculate Effective Date :</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" type="date" id="calDate" name="calDate" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <button type="submit" class="col-md-2 btn btn-primary" (click)="onRetrive()">Retrieve</button>
+                <button type="button" class="offset-md-1 col-md-2 btn btn-primary">Submit</button>
+                <button type="button" class="offset-md-1 col-md-2 btn btn-primary">Reset</button>
+                <button type="button" class="offset-md-1 col-md-2 btn btn-primary">Signout</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="purpose">Purpose of Model Run :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <select
+                        required
+                        ngModel
+                        #ModelRun="ngModel"
+                        name="ModelRun" 
+                        class="form-control">
+                            <option value="select">Select any</option>
+                            <option value="NAE">NAE</option>
+                            <option value="SOPAC Review">SOPAC Review</option>
+                            <option value="Test">Test</option>
+                            <option value="Tax">Tax</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="borrower">Borrower :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input 
+                        class="form-control" 
+                        type="text" 
+                        id="borrower" 
+                        name="borrower"
+                        required
+                        ngModel
+                        #borrower="ngModel" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="coBorrower">Co-Borrower :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input class="form-control" type="text" id="coBorrower" name="coBorrower" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="portfolio">Portfolio Group :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <select class="form-control" id="portfolio">
+                            <option value="select">Select any</option>
+                            <option value="bandp">B & P</option>
+                            <option value="bec">BEC</option>
+                            <option value="cche">CCHE</option>
+                            <option value="cchm">CCHM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="cloanNumber">Concentric Loan Number:</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input 
+                        class="form-control" 
+                        type="number"
+                        name="CCLoanNumber"
+                        required
+                        ngModel
+                        #CCLoanNumber="ngModel"
+                         />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="oloanNumber">Other Loan Number :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input class="form-control" type="number" id="oloanNumber" name="oloanNumber" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-4">
+                        <label>Client ID :</label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Corcentric Loan</label>
+                        <br />
+                        <input class="form-control" type="text" id="loanNumber" name="loanNumber" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Other Loan</label>
+                        <br />
+                        <input class="form-control" type="text" id="loanNumber" name="loanNumber" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- section 2 -->
+    <div class="section2">
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Property Address:</p>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="state">County :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <select [(ngModel)]="selectedCountry.id"
+                        (change)="onSelect($event.target.value)">
+                  <option value="0">--Select--</option>
+                  <option *ngFor="let country of countries"
+                          value= {{country.id}}>{{country.name}}
+                  </option>
+                  </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="county">State :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <select>
+                            <option value="0">--Select--</option>
+                            <option *ngFor="let state of states "
+                                  value= {{state.id}}>{{state.name}}
+                            </option>
+                            </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="zipcode">Zipcode :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="number" class="form-control" id="zipcode" name="zipcode" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="bankrupty">Bankrupty Loan :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="radio" id="bankruptyYes" name="bankrupty" />Yes
+                        <input type="radio" id="bankruptyNo" name="bankrupty" />No
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="unsecured">Unsecured :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="radio" id="unsecuredYes" name="unsecured" />Yes
+                        <input type="radio" id="unsecuredNo" name="unsecured" />No
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="mortageIndicator">Mortage Insurence Indicatior :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="radio" id="mortageIndicatorYes" name="mortageIndicator" />Yes
+                        <input type="radio" id="mortageIndicatorNo" name="mortageIndicator" />No
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="mortageInvestor">Mortage Insurence Investor :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" id="mortageInvestor" name="mortageInvestor" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-5">
+                        <label for="appValue">Current Appraised Value :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="number" class="form-control" id="appValue" name="appValue" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 verticalLine">
+                <p>Foreclosure Info:</p>
+                <div class="row form-group">
+                    <div class="col-md-4">
+                        <label>Foreclosure Start Date :</label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Corcentric Loan</label>
+                        <br />
+                        <input class="form-control" type="text" id="loanNumber" name="loanNumber" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Other Loan</label>
+                        <br />
+                        <input class="form-control" type="text" id="loanNumber" name="loanNumber" />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-4">
+                        <label>Foreclosure sale Date :</label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Corcentric Loan</label>
+                        <br />
+                        <input class="form-control" type="text" id="loanNumber" name="loanNumber" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Other Loan</label>
+                        <br />
+                        <input class="form-control" type="text" id="loanNumber" name="loanNumber" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- section 3 -->
+    <div class="section3">
+        <hr>
+        <div class="row form-group">
+            <div class="col-md-3">
+                <label for="currentApprised">Current Appraised Value :</label>
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="text" id="currentApprised" name="currentApprised" />
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-3">
+                <label for="netAvailableE">Net Available Equity :</label>
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="text" id="netAvailableE" name="netAvailableE" />
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-3">
+                <label for="equityValueRatio">Equity to Value Ratio :</label>
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="text" id="equityValueRatio" name="equityValueRatio" />
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-3">
+                <label for="closingCard">Closing Cost :</label>
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="text" id="closingCard" name="closingCard" />
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-3">
+                <label for="balRatio">First Mortage Balance Ratio :</label>
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="text" id="balRatio" name="balRatio" />
+            </div>
+        </div>
+    </div>
+</form>

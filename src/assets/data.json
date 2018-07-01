@@ -1,0 +1,194 @@
+{
+    "LMCA": [
+        {
+            "ModelRun": "NAE",
+            "CCLoanNumber": "CC196001",
+            "PortfolioGroup": "B&P",
+            "CCClientID": "CC000845",
+            "State": "California",
+            "County": "Apline County",
+            "ZipCode": 95646,
+            "BankruptcyLoan": "True",
+            "Usecured": "False",
+            "MortgageInsuIndicator": "True",
+            "CurrentAppraisedValue": 340000,
+            "CCForeclosure": {
+                "StartDate": "07/22/2011",
+                "SaleDate": "09/13/2011"
+            },
+            "NetAvailableEquity": 68000,
+            "EquityToValueRatio": 0.3
+        },
+        {
+            "ModelRun": "SOPAC Review",
+            "CCLoanNumber": "CC196002",
+            "PortfolioGroup": "CCHE",
+            "CCClientID": "CC000846",
+            "State": "Arkansas",
+            "County": "Pike County",
+            "ZipCode": 71028,
+            "BankruptcyLoan": "False",
+            "Usecured": "False",
+            "MortgageInsuIndicator": "True",
+            "CurrentAppraisedValue": 1260000,
+            "CCForeclosure": {
+                "StartDate": "05/13/2011",
+                "SaleDate": "05/23/2011"
+            },
+            "NetAvailableEquity": 128000,
+            "EquityToValueRatio": 0.45
+        },
+        {
+            "ModelRun": "SOPAC Review",
+            "CCLoanNumber": "CC196003",
+            "PortfolioGroup": "BEC",
+            "CCClientID": "CC000847",
+            "State": "Arkansas",
+            "County": "",
+            "ZipCode": 71046,
+            "BankruptcyLoan": "",
+            "Usecured": "False",
+            "MortgageInsuIndicator": "False",
+            "CurrentAppraisedValue": 860000,
+            "CCForeclosure": {
+                "StartDate": "01/01/2011",
+                "SaleDate": "09/14/2011"
+            },
+            "NetAvailableEquity": 49000,
+            "EquityToValueRatio": 0.34
+        },
+        {
+            "ModelRun": "Tax",
+            "CCLoanNumber": "CC196004",
+            "PortfolioGroup": "BEC",
+            "CCClientID": "CC000848",
+            "State": "California",
+            "County": "Butte County",
+            "ZipCode": 95311,
+            "BankruptcyLoan": "False",
+            "Usecured": "True",
+            "MortgageInsuIndicator": "True",
+            "CurrentAppraisedValue": 2560000,
+            "CCForeclosure": {
+                "StartDate": "03/29/2011",
+                "SaleDate": "05/17/2011"
+            },
+            "NetAvailableEquity": 54000,
+            "EquityToValueRatio": 0.24
+        },
+        {
+            "ModelRun": "Test",
+            "CCLoanNumber": "CC196005",
+            "PortfolioGroup": "CCHE",
+            "CCClientID": "CC000849",
+            "State": "",
+            "County": "Fayette County",
+            "ZipCode": 38342,
+            "BankruptcyLoan": "True",
+            "Usecured": "True",
+            "MortgageInsuIndicator": "",
+            "CurrentAppraisedValue": 501000,
+            "CCForeclosure": {
+                "StartDate": "",
+                "SaleDate": "04/01/2012"
+            },
+            "NetAvailableEquity": 26000,
+            "EquityToValueRatio": 0.5
+        },
+        {
+            "ModelRun": "NAE",
+            "CCLoanNumber": "CC196006",
+            "PortfolioGroup": "CCHM",
+            "CCClientID": "CC000850",
+            "State": "California",
+            "County": "Del Norte County",
+            "ZipCode": 90001,
+            "BankruptcyLoan": "True",
+            "Usecured": "False",
+            "MortgageInsuIndicator": "False",
+            "CurrentAppraisedValue": 2230000,
+            "CCForeclosure": {
+                "StartDate": "12/26/2011",
+                "SaleDate": "04/13/2012"
+            },
+            "NetAvailableEquity": 45000,
+            "EquityToValueRatio": 0.4
+        },
+        {
+            "ModelRun": "Test",
+            "CCLoanNumber": "CC196007",
+            "PortfolioGroup": "B&P",
+            "CCClientID": "CC000851",
+            "State": "Arkansas",
+            "County": "Washington County",
+            "ZipCode": 71037,
+            "BankruptcyLoan": "False",
+            "Usecured": "True",
+            "MortgageInsuIndicator": "True",
+            "CurrentAppraisedValue": 5276000,
+            "CCForeclosure": {
+                "StartDate": "06/27/2011",
+                "SaleDate": "09/03/2011"
+            },
+            "NetAvailableEquity": 68000,
+            "EquityToValueRatio": 0.44
+        },
+        {
+            "ModelRun": "SOPAC Review",
+            "CCLoanNumber": "CC196008",
+            "PortfolioGroup": "",
+            "CCClientID": "CC000852",
+            "State": "California",
+            "County": "Alameda County",
+            "ZipCode": 97893,
+            "BankruptcyLoan": "True",
+            "Usecured": "",
+            "MortgageInsuIndicator": "True",
+            "CurrentAppraisedValue": 3400000,
+            "CCForeclosure": {
+                "StartDate": "05/22/2011",
+                "SaleDate": "07/13/2011"
+            },
+            "NetAvailableEquity": "",
+            "EquityToValueRatio": 0.32
+        },
+        {
+            "ModelRun": "Tax",
+            "CCLoanNumber": "CC196009",
+            "PortfolioGroup": "CCHM",
+            "CCClientID": "CC000853",
+            "State": "Alabama",
+            "County": "",
+            "ZipCode": 36310,
+            "BankruptcyLoan": "",
+            "Usecured": "True",
+            "MortgageInsuIndicator": "False",
+            "CurrentAppraisedValue": 730000,
+            "CCForeclosure": {
+                "StartDate": "07/25/2011",
+                "SaleDate": ""
+            },
+            "NetAvailableEquity": 28000,
+            "EquityToValueRatio": ""
+        },
+        {
+            "ModelRun": "Tax",
+            "CCLoanNumber": "CC196010",
+            "PortfolioGroup": "CCHE",
+            "CCClientID": "CC000854",
+            "State": "Arkansas",
+            "County": "Randolph County",
+            "ZipCode": 71601,
+            "BankruptcyLoan": "False",
+            "Usecured": "False",
+            "MortgageInsuIndicator": "False",
+            "CurrentAppraisedValue": 5900000,
+            "CCForeclosure": {
+                "StartDate": "06/22/2012",
+                "SaleDate": "09/15/2012"
+            },
+            "NetAvailableEquity": 35000,
+            "EquityToValueRatio": 0.27
+        }
+    ]
+}
