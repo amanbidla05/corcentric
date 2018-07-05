@@ -1,4 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/Http';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Router, ActivatedRoute } from '@angular/router';
 import { Form, FormsModule } from '@angular/forms';
@@ -28,9 +29,10 @@ import { EquityAnalysisComponent } from './components/equity-analysis/equity-ana
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
